@@ -70,7 +70,6 @@ header{
     position: relative;
 }
 
-
 .header{
     display: flex;
     justify-content: space-around;
@@ -86,11 +85,11 @@ header{
     flex: 0.7;
 }
 
-
 .menu{
     flex: 3;
     display: flex;
 }
+
 .menu > li{
     padding: 28px 13px;
 }
@@ -98,7 +97,7 @@ header{
 .menu .sub-menu{
     position: absolute;
     justify-content: space-between;
-    top: 150px;
+    top: 148px;
     width: 1740px;
     height: auto;
     left: 65px;
@@ -127,7 +126,6 @@ header{
 .sub-menu .flexcol  ul  li  a{
     color: #707171;
 }
-
 
 .menu .sub-menu .flexcol h2{
     margin-bottom: 30px;
@@ -201,7 +199,6 @@ header{
     filter: blur(0.5px);
 }
 
-
 .menu > li:first-child{
     background-color: #f51b56;
     font-weight: 800;  
@@ -214,6 +211,7 @@ header{
 .menu > li:first-child > .sub-menu > .flexcol > .Product{
     flex: 1;
 }
+
 .menu > li:first-child > .sub-menu > .flexcol > .Illustration{
     flex: 3;
 }
@@ -260,6 +258,81 @@ header{
     z-index: 1;
 }
 
+.daily-hot-deals{
+    margin: 50px 0;
+}
+
+.daily-hot-deals-title{
+    margin-left: 50px;
+}
+
+.daily-hot-deals-gird{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.daily-hot-deals-row{
+    max-width: 1800px;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    overflow-x: scroll;
+}
+
+.daily-hot-deals-row::-webkit-scrollbar{
+    display: none;
+}
+
+#backBtn, #nextBtn{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.daily-hot-deals-item{
+    position: relative;
+}
+
+.daily-hot-deals-item .new{
+    padding: 5px;
+    color: #fff;
+    background-color: #2f5acf;
+    z-index: 1;
+    position: absolute;
+    font-size: 10px;
+    border-radius: 5px;
+    margin: 10px 0 0 10px;
+}
+
+.daily-hot-deals-item img{
+    width: 330px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.daily-hot-deals-item a{
+    color: #212121;
+}
+
+.daily-hot-deals-item .color{
+    color: #bfbdbd;
+}
+
+.daily-hot-deals-item .price{
+    display: flex;
+    gap: 10px;
+}
+
+.daily-hot-deals-item .price .cost{
+    color: #a7a5a5;
+    text-decoration: line-through;
+}
+
+.daily-hot-deals-item .price .sale{
+    color: rgb(235, 29, 29);
+}
+
 footer{
     background-color: #000;
 }
@@ -289,6 +362,7 @@ footer{
     background-color: #2f5acf;
     border-radius: 20px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .comment > a:hover{
@@ -328,7 +402,7 @@ footer{
 }
 
 .footer-menu{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .footer-menu ul{
@@ -351,7 +425,7 @@ footer{
 }
 
 .footer-menu ul li a:hover{
-    color: rgb(242, 242, 131);
+    color: rgb(231, 231, 73);
     transition: .2s;
 }
 

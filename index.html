@@ -372,8 +372,155 @@
                     prevEl: '.swiper-button-prev',
                 },
                 });
+                var slides = document.querySelectorAll('.swiper-slide');
+                var currentSlide = 0;
+                var slideInterval = setInterval(nextSlide, 3000);
+
+                function nextSlide() {
+                slides[currentSlide].className = 'swiper-slide';
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].className = 'swiper-slide active';
+                }
             </script>
+
         </section>
+        <div class="daily-hot-deals">
+            <div class="daily-hot-deals-title">
+                <h1>Sản phẩm nổi bật</h1>
+            </div>
+            <div class="daily-hot-deals-gird">
+                <img src="/Ảnh//back.png" id="backBtn">
+                <div class="daily-hot-deals-row">
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="daily-hot-deals-item">
+                        <div class="new">New</div>
+                        <a href=""><img src="/Ảnh/daily-hot1.webp" alt=""></a>
+                        <div class="daily-hot-deals-item-detail">
+                        <a href="">Đai đeo bụng chạy bộ</a> 
+                        <p class="color">Đen</p>
+                        <div class="price">
+                            <p>369.000đ</p>
+                            <p class="cost">399.000đ</p>  
+                            <p class="sale">-8%</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/Ảnh//next.png" id="nextBtn">
+            </div>
+            <script>
+                let scrollContainer = document.querySelector(".daily-hot-deals-row");
+                let backBtn = document.getElementById("backBtn"); 
+                let nextBtn = document.getElementById("nextBtn");
+          
+                scrollContainer.addEventListener("wheel", (evt) =>{
+                  evt.preventDefault();
+                  scrollContainer.scrollLef += evt.deltaY;
+                  scrollContainer.style.scrollBehavior = "auto";
+                });
+          
+                nextBtn.addEventListener("click", () =>{
+                  scrollContainer.style.scrollBehavior = "smooth";
+                  scrollContainer.scrollLeft += 350;
+                });
+          
+                backBtn.addEventListener("click", () =>{
+                  scrollContainer.style.scrollBehavior = "smooth";
+                  scrollContainer.scrollLeft -= 350;
+                });
+          
+            </script>
+        </div>
     </main>
     <footer>
         <div class="container">
